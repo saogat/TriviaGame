@@ -1,0 +1,120 @@
+.jumbotron {
+    background: white;
+}
+
+.navbar-brand {
+    padding-top: 30px;
+    margin-left: 40px;
+}
+
+.navbar-header {
+    background-color: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    background-image: url("giraffes.jpg");
+}
+
+.container-fluid {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+h1 {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+img {
+    width: 20%;
+    height: 20%;
+}
+
+.img-with-text {
+    text-align: justify;
+    width: 250px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 800px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+h3 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+h4 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 67px;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 120px;
+    padding-top: 40px;
+}
+
+hr {
+    padding: 0;
+    font-weight: 200;
+    border: none;
+    border-top: solid 5px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+
+iframe {
+    text-align: center;
+}
+
+.whitetext {
+    color: white;
+}
+
+.centered-div {
+    position: relative;
+    background: rgb(92, 217, 226);
+    height: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
+    margin-top: 37px;
+}
+
+.start-button{
+    position: absolute;
+    bottom: 50px;
+    right: 25%;
+    width: 50%;
+}
+
+.question, .answer{
+    background: white;
+    padding: 30px;
+    margin: 40p
+}
+
+.answerButton{
+    width: 80%;
+    margin: 5px 20px 5px 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
