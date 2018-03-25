@@ -134,7 +134,7 @@ function startGame() {
             decrement: function () {
                 let self = counter;
                 self.seconds--;
-                $(".counter").html("<h2>" + "Seconds left:  " + self.seconds + "</h2>");
+                $(".counter").html("<h3>" + "Seconds left:  " + self.seconds + "</h3>");
                 if (self.seconds === 0) {
                     self.stop();
                     showTimeup();
@@ -151,8 +151,8 @@ function startGame() {
 
         function play() {
             if (questionIndex < 10) {
-                showNextData();
                 counter.run();
+                showNextData();
                 $(".answerButton").on("click", function (event) {
                     event.preventDefault();
                     counter.stop();
