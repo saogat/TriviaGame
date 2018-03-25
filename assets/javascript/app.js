@@ -23,7 +23,6 @@ function startGame() {
         url: url,
         method: 'GET',
     }).done(function (response) {
-
         var centerDiv = $(".centered-div");
         var questionIndex = 0;
         var wins = 0;
@@ -33,7 +32,7 @@ function startGame() {
 
         var data = function getData() {
             let data = [];
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < response.results.length; i++) {
                 let qAndAs = {};
                 qAndAs.question = response.results[i].question;
                 qAndAs.answers = response.results[i].incorrect_answers;
@@ -66,7 +65,6 @@ function startGame() {
             counterDiv.append(counterNumber);
             centerDiv.append(counterDiv);
 
-
             // Show answers
             qAndAs.answers.forEach(function (answer) {
                 let buttonDiv = $("<button>");
@@ -74,12 +72,10 @@ function startGame() {
                 answerDiv.append(buttonDiv.attr("data-answer", answer).html(answer));
                 centerDiv.append(answerDiv);
                 centerDiv.append($("<br>"));
-                console.log(answer);
             });
         }
 
         function showNextData() {
-            console.log("showData " + questionIndex);
             correctAnswer = data[questionIndex].correctAnswer;
             showData(data[questionIndex]);
         }
@@ -111,7 +107,6 @@ function startGame() {
             losses++;
         }
 
-
         function delayTimeup() {
             var id = setTimeout(function () {
                 showTimeup();
@@ -125,7 +120,6 @@ function startGame() {
             }, 2000);
             return id;
         }
-
 
         var counter = {
             seconds: maxSeconds,
@@ -153,31 +147,24 @@ function startGame() {
                 $(".counter").empty();
                 self.seconds = maxSeconds;
             }
-
         }
 
         function play() {
-
             if (questionIndex < 10) {
                 showNextData();
                 counter.run();
                 $(".answerButton").on("click", function (event) {
                     event.preventDefault();
                     counter.stop();
-                    console.log("button answer " + $(this).attr("data-answer"));
-                    console.log("data answer " + questionIndex + "  " + correctAnswer);
                     if ($(this).attr("data-answer") == correctAnswer) {
                         showSuccess();
                     } else {
                         showFailure();
                     }
                 });
-
             } else {
                 showStart()
             };
-
-            console.log("In play " + questionIndex);
             questionIndex++;
         }
 
@@ -206,9 +193,8 @@ function startGame() {
     })
 };
 
-
 $(".centered-div").on("click", ".start-button", function (event) {
-    console.log("working");
     event.preventDefault();
+    console.log("started");
     startGame();
 })
