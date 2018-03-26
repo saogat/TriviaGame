@@ -111,8 +111,12 @@ iframe {
     margin: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.answer{
+    min-height: 200px;
 }
 
 .counter{
@@ -123,11 +127,12 @@ iframe {
     margin-right: auto;
     margin-bottom: 10px;
     margin-top: 10px;
+    min-height: 80px;
 }
 
 .answerButton{
     width: 80%;
-    margin: 5px 20px 5px 20px;
+    margin: 5px 30px 5px 20px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
